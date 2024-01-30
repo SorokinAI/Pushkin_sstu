@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Пушкинский контакт - Новая запись 
+{% endblock %}
+
+{% block our %}
+    <h1>Добавление записи</h1>
+    <form method="post">
+        <input type="text" name="author" class="form_control_title" placeholder="Имя автора (по умолчанию Александр Пушкин)"><br>
+        <input type="text" name="title" class="form_control_title" placeholder="Название"><br>
+        <textarea type="text" name="text" class="form_control_text" placeholder="Начните писать..."></textarea><br>
+        <input type="submit" class="btn-success" value="Записать">
+        
+    </form>
+{% endblock %}

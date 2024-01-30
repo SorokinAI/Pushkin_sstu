@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="block">
+                <h1 class='logo'>Пушкинский контакт</h1>
+                <h2 class='logo logo2'>- главная социальная сеть XIX века</h2>
+            <div id="buttons_head">
+                <ul>
+                    <a class='button_head' href="/home">Главная</a>
+                    <a class='button_head' href="/about">О сайте</a>
+                </ul>
+            </div>
+            </div>
+            <a class='new' href="/create_post">Написать что-то новое</a>
+        </header>
+
+        <section class="our_content">{% block our %}{% endblock %}</section>
+
+        <footer>
+            <hr>
+            <h1 class="footer_name">SorokinAI</h1>
+            <div class="social_media">
+                <a href="https://www.sstu.ru/">
+                    <img class="footer_sstu" src="{{ url_for('static', filename='img/sstu.svg') }}" alt="СГТУ">
+                </a>
+
+                <a href="https://vk.com/arseniisorokina">
+                    <img class="social_media_img" src="{{ url_for('static', filename='img/vk.png') }}" alt="VK">
+                </a>
+
+                <a href="https://t.me/ArseniiSorokin">
+                    <img class="social_media_img" src="{{ url_for('static', filename='img/telegram.png') }}" alt="Telegram">
+                </a>
+            </div>
+            
+        </footer>
+
+    </div>
+</body>
+</html>

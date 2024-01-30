@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Пушкинский контакт - Главная 
+{% endblock %}
+
+{% block our %}
+    {% for posts in articles %}
+        <div class="post">
+            <h2 class="post_title">{{ posts.title }}</h2>
+            <a href="/authors/{{ posts.author }}" class="post_author">{{ posts.author }}</a>
+            <p class="post_date">{{ posts.date.date() }}</p>
+            <hr>
+            <p class="post_text">{{ posts.text }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

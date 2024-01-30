@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Записи - {{ data.author }}
+{% endblock %}
+
+{% block our %}
+<h1 class="authors_name">Записи - {{ data.author }}</h1>
+        {% for posts in article %}
+            <div class="post">
+                <h2 class="post_title">{{ posts.title }}</h2>
+                <a href="/authors/{{ posts.author }}" class="post_author">{{ posts.author }}</a>
+                <p class="post_date">{{ posts.date.date() }}</p>
+                <p class="post_text">{{ posts.text }}</p>
+            </div>
+        {% endfor %}
+{% endblock %}
